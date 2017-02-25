@@ -51,7 +51,7 @@ inline bool is_atty(const std::ostream& stream) {
 }
 
 std::ostream& set(std::ostream& stream, int param) {
-    if (is_attty(stream)) {
+    if (is_atty(stream)) {
         stream << "\033[" << param << "m";
     }
     return stream;
